@@ -5,7 +5,7 @@ $dbpassword="";
 
 try{
 $pdo=new PDO($dsn,$dbuser,$dbpassword);
-$sql="UPDATE usuarios SET email='turmadasbanguelas@firebol.com.br' WHERE id_user='5'; ";
+$sql="UPDATE usuarios SET nome='elaine batista' WHERE nome='elaine batista franca'; ";
 $sql=$pdo->query($sql);
 echo "alterado com sucesso";
 

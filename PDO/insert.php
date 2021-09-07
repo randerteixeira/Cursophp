@@ -4,9 +4,9 @@ $dbuser="root";
 $dbpassword="";
 try{
     $pdo=new PDO($dsn,$dbuser,$dbpassword);
-$nome="nicole helena machado inacio";
-$email="grupo_das_banguelas@fire.com.br";
-$senha=md5(121314);
+$nome="elaine batista franca ";
+$email="elainebatista@ofcialmail.com";
+$senha=md5("010796rander");
 $sql="INSERT INTO usuarios SET nome='$nome',email='$email',senha='$senha'" ;
 $sql=$pdo->query($sql);
 echo"usuario inserido=".$pdo->lastInsertId();
