@@ -6,7 +6,7 @@ if(isset($_POST['nome'])&&empty($_POST['nome']==false)){
 $name=addslashes($_POST['nome']);
 $email=addslashes($_POST['email']);
 $pass=md5(addslashes($_POST['senha']));
-$sql="INSERT INTO usuarios SET nome='$name',email='$email',senha='$senha'";
+$sql="INSERT INTO usuarios SET nome='$name',email='$email',senha='$pass'";
 $pdo->query($sql);
 header("location:index.php");
 }
