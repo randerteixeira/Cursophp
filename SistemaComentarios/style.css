@@ -1,0 +1,21 @@
+body{
+    max-width: 800px;
+    margin: auto;
+    border: 1px solid #999;
+
+}
+.container_global{
+    background-color: blanchedalmond;
+}
+fieldset{
+    border: 0;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 10px;
+}
+.container_msg{
+    border: 1px solid rgba(12, 10, 10, 0.658);
+    border-radius: 50px;
+    margin: 20px;
+    padding: 10px;
+}
