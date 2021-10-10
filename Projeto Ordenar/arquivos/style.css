@@ -1,0 +1,13 @@
+*{
+    color: blue;
+
+    border: 0;
+}
+th,td{
+
+    border-bottom: 1px solid black;
+    text-align: center;
+    
+}table{
+    border: 1px solid blue;
+}
