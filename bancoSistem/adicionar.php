@@ -9,8 +9,7 @@ if (isset($_POST['nome']) && !empty($_POST['nome'])) {
     $conta = addslashes($_POST['conta']);
     $senha = addslashes($_POST['senha']);
 
-
-    $sql = $pdo->prepare("INSERT INTO contas SET titular=:nome,agencia=:agencia,conta=:conta,senha=:senha,saldo=:saldo");
+   $sql = $pdo->prepare("INSERT INTO contas SET titular=:nome,agencia=:agencia,conta=:conta,senha=:senha,saldo=:saldo");
     $sql->bindValue(":nome", $nome);
     $sql->bindValue(":agencia", $agencia);
     $sql->bindValue(":conta", $conta);
@@ -18,6 +17,7 @@ if (isset($_POST['nome']) && !empty($_POST['nome'])) {
     $sql->bindValue(":saldo", 0);
     $sql->execute();
     }
+ 
 } else {
     echo "erro";
 }

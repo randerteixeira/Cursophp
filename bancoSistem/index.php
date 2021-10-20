@@ -16,6 +16,7 @@ if (isset($_SESSION['banco']) && !empty($_SESSION['banco'])) {
     header("location:login.php");
     exit;
 }
+require 'head.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

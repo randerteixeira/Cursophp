@@ -11,42 +11,53 @@ if (isset($_POST['agencia']) && !empty($_POST['agencia'])) {
     $sql->bindValue(":senha", md5($senha));
     $sql->execute();
 
-    if ($sql->rowCount()>0){
-       $sql=$sql->fetch();
-       $_SESSION['banco']=$sql['id'];
-       header("location:index.php");
+    if ($sql->rowCount() > 0) {
+        $sql = $sql->fetch();
+        $_SESSION['banco'] = $sql['id'];
+        header("location:index.php");
     }
 }
 
 
-
+require 'head.php';
 ?>
 
 
-<!DOCTYPE html>
-<html lang="pt-br">
+<div class="container_login">
+    <div class="logo_login">...</div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <form class="form_login" method="post">
+        <div class="form_input_login">
+        <div class="label">
+            agencia:
+            </div>
 
-<body>
-    
-    <form method="post">
-        agencia: <br>
-        <input type="text" name="agencia" id=""><br><br>
-        conta: <br>
-        <input type="text" name="conta"><br><br>
-        senha: <br>
-        <input type="password" name="senha" id=""><br><br>
-        <input type="submit" value="entrar">
+
+            <input type="text" name="agencia" id="">
+        </div>
+
+        <div class="form_input_login">
+        <div class="label">
+            conta:
+            </div>
+            <input type="text" name="conta">
+        </div>
+        <div class="form_input_login">
+            <div class="label">
+            senha:
+            </div>
+            <input type="password" name="senha">
+        </div>
+        <div class="btn">
+        <input  id="btn_login"type="submit" value="entrar">
+        </div>
     </form>
-    <br><br><br>
+
+
+
     <p>Você e do adiministrativo ?</p>
     <a href="login_adm.php"><button> entre por aqui </button></a>
-</body>
-
-</html>
+</div>
+<?php
+require 'rodape.php';
+?>
