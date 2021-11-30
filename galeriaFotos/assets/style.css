@@ -1,0 +1,29 @@
+
+*{
+    text-decoration: none;
+}
+.imagem_container{
+    display: flex;
+    padding: 20px;
+    
+
+}.imagem_item{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border: 1px solid black;
+    flex-wrap: wrap;
+    
+
+}
+.imagem_item img{
+    max-width: 150px;
+    height: 150px;
+    padding: 10px;
+}
+.icon_image{
+    display: flex;
+    padding: 10px;
+    font-size: 20px;
+    
+}
