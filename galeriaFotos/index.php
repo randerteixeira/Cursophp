@@ -14,6 +14,7 @@ if (isset($id) && !empty($id)) {
       $data=$sql['status'];
      $cor=cores($sql['power']);
      $poder=$sql['power'];
+     $imgperfil=$sql['fotoperfil'];
      $_SESSION['poder']=$poder;
     } else {
         echo "nao achamos";
@@ -22,19 +23,10 @@ if (isset($id) && !empty($id)) {
     header("location:login.php");
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">;
-    <title>Document</title>
-</head>
-<body>
- <a href="sair.php">sair</a>
-<h1>olà <?php echo$nome;?></h1> <p>ultima visita:<?php echo times($data);?> dias</p>   
+
 <?php
+
+require 'header.php';
 if($poder==3){
 require 'upload.php';
 
@@ -46,6 +38,9 @@ uploadok();
 require 'selectphothos.php';
 
 ?> 
+
+
+</div>
 </div>
 </body>
 </html>
