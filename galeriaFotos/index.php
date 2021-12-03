@@ -27,20 +27,33 @@ if (isset($id) && !empty($id)) {
 <?php
 
 require 'header.php';
-if($poder==3){
-require 'upload.php';
 
-}
 uploadok();
 ?>
+<section class="corpo">
+   
 <div class="imagem_container">
+    
 <?php
+if($poder>=2){
+    require 'upload.php';
+    
+    }
 require 'selectphothos.php';
 
 ?> 
 
 
 </div>
+<div class="users">
+<div class="adm_text">Nossos usuarios</div>
+<?php 
+require 'todos.php';
+?>
+
+
+</div>
+</section>
 </div>
 </body>
 </html>

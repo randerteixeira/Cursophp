@@ -40,13 +40,41 @@ header {
 
     margin: auto;
 }
+.corpo{
+    display: flex;
+    
+
+}
 
 .imagem_container {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: initial;
 
 
 
+}
+.users{
+    width: 30%;
+    height: 1000px;
+    padding: 10px;
+    background-color: rgba(221, 72, 154, 0.164);
+}
+.menu_upload {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    background-color: rgba(221, 72, 154, 0.164);
+
+}
+
+.adm_text {
+    font-size: 20px;
+    font-family: mano;
+    color: rgba(105, 0, 243, );
+    text-align: center;
 }
 
 header .menu {
@@ -72,7 +100,9 @@ header .menu {
 
 .imagem_item {
     display: flex;
+    flex: 1;
     flex-direction: column;
+    max-height: 300px;
     margin: 10px;
     border: 1px solid black;
     border-radius: 5px;
@@ -84,7 +114,11 @@ header .menu {
 .imagem_item img {
     max-width: 150px;
     height: 150px;
+    margin: auto;
     padding: 10px;
+}
+.imagem_item .imguser{
+  align-self: center;
 }
 
 .icon_image {
@@ -132,24 +166,30 @@ header .img_perfil_user {
 
 }
 
-.menu_upload {
-    width: 50%;
-    height: 100px;
-    padding: 20px;
-    background-color: rgba(221, 72, 154, 0.164);
 
-}
-
-.adm_text {
-    font-size: 20px;
-    font-family: mano;
-    color: rgba(105, 0, 243, );
-    text-align: center;
-}
 
 .img_perfil_user img {
     width: 100px;
     height: 100px;
     border-radius: 50px;
 
+}
+.imguser{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 10px;
+}
+.imguser img{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    
+
+}
+.containerusers{
+    display: flex;
+    align-items: center;
+    margin: 10px;
 }
