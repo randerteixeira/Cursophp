@@ -46,7 +46,7 @@ require 'selectphothos.php';
 
 </div>
 <div class="users">
-<div class="adm_text">Nossos </div>
+<div class="adm_text">Nossos usuario</div>
 <?php 
 require 'todos.php';
 ?>
