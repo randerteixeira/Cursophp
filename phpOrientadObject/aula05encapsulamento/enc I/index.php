@@ -21,10 +21,10 @@ class Post
         return $this->autor;
     }
 }
-$post1=new Post();
+$post1=new Post('void');
 $post1->setAuthor('rander gabriel Teixeira');
 
-$post2=new Post();
+$post2=new Post('void');
 $post2->setAuthor('mariana');
 echo "post1".$post1->like ."<br>  Autor:".$post1->autor;
 echo "post1".$post2->like ."<br> Autor:".$post2->autor;
