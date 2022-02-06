@@ -41,22 +41,50 @@ class Contato
     }
     public function getAll()
     {
-        $sql = " SELECT * FROM usuarios ";// recebe todos os usuarios que existem na tabela usuarios 
-        $sql = $this->pdo->query($sql);//execucao da query
+        $sql = " SELECT * FROM usuarios "; // recebe todos os usuarios que existem na tabela usuarios 
+        $sql = $this->pdo->query($sql); //execucao da query
 
-        if ($sql->rowCount() > 0) {// se tudo correr bem retornara um resultado aqui testa se retornou 
+        if ($sql->rowCount() > 0) { // se tudo correr bem retornara um resultado aqui testa se retornou 
             return $sql->fetchAll();
         } else {
-            return array();//ou retorna uma array vasia..
+            return array(); //ou retorna uma array vasia..
         }
     }
-    public function editar($nome,$email){
-
-
-
-
+    public function editar($nome, $email)
+    {
+        if ($this->existeEmail($email) == true) {
+            $sql = "UPDATE usuarios SET nome=:nome WHERE email=:email";
+            $sql = $this->pdo->prepare($sql);
+            $sql->bindValue(':nome', $nome);
+            $sql->bindValue(':email', $email);
+            $sql->execute();
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function deletar($email)
+    {
+        if ($this->existeEmail($email)) {
+            $sql = "DELETE FROM usuarios WHERE email=:email";
+            $sql = $this->pdo->prepare($sql);
+            $sql->bindValue(':email', $email);
+            $sql->execute();
+            return true;
+        } else {
+            return false;
+        }
     }
     private function existeEmail($email)
     {
+        $sql = "SELECT * FROM usuarios WHERE email=:email";
+        $sql = $this->pdo->prepare($sql);
+        $sql->bindValue(':email', $email);
+        $sql->execute();
+        if ($sql->rowCount() > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
