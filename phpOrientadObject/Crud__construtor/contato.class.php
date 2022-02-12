@@ -24,7 +24,7 @@ class Contato
             return false; // senao retorna falso
         }
     }
-    //segunda parte do crud aonde ira selecinar um usuario pelo email
+    //segunda parte do crud aonde ira selecionar um usuario pelo email
     public function getNome($email) // envia um email
     {
         $sql = "SELECT nome FROM usuarios WHERE email=:email";

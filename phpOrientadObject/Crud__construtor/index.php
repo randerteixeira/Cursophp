@@ -1,14 +1,47 @@
 <?php
+session_start();
 include 'contato.class.php';
 
 $contato = new Contato();
-/*$contato->adicionar('randerifurutai@gmail.com','rander');
-$contato->adicionar('rander-pdr_@hotmail.com','rander batista Teixeira');*/
-$contato->deletar('rander-pdr_@hotmail.com');
-$lista = $contato->getAll();
+$itens = $contato->getAll();
+?>
 
-foreach ($lista as $itens) {
-    echo"</br>";
-    echo $itens['nome']." ";
-    echo $itens['email'];
-}
+<a href="add.php">[Adicionar]</a>
+<table border="1" width="500">
+    <tr>
+        <th>id</th>
+        <th>nome</th>
+        <th>email</th>
+        <th>edit</th>
+        <th>delet</th>
+    </tr>
+
+    <?php
+    foreach ($itens as $item) :
+
+    ?>
+        <tr>
+            <td><?php echo $item['id'] ?></td>
+            <td><?php echo $item['nome'] ?></td>
+            <td><?php echo $item['email'] ?></td>
+            <td style="background-color:green;">
+                <a href="alterar.php?email=<?php echo $item['email'] ?>">
+                    alterar
+                </a>
+            </td>
+            <td style="background-color:red;">
+                <a href="delete.php?email=<?php echo $item['email'] ?>">
+                    excluir
+                </a>
+            </td>
+        </tr>
+    <?php
+    endforeach;
+
+
+    ?>
+
+
+
+
+</table>
