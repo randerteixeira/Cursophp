@@ -25,6 +25,8 @@ class Calculadora
         return $x % $y;
     }
 }
+
+
 $calcular = new Calculadora();
 function calc($x, $y, $op, $calcular)
 {

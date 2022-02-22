@@ -36,4 +36,11 @@ class Usuarios
         $sql = $this->db->prepare("UPDATE usu SET nome=?,email=?,senha=? WHERE id=?");
         $sql->execute(array($nome, $email, md5($senha), $id));
     }
+    public function delete($id)
+    {
+
+        $sql = $this->db->prepare("DELETE FROM usu WHERE id=?");
+        $sql->bindValue(1, $id);
+        $sql->execute();
+    }
 }
