@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "0": 1,
+        "nome": "rander",
+        "1": "rander",
+        "sobrenome": "teixeira",
+        "2": "teixeira",
+        "sexo": 1,
+        "3": 1
+    },
+    {
+        "id": 2,
+        "0": 2,
+        "nome": "mariana",
+        "1": "mariana",
+        "sobrenome": "teixeira",
+        "2": "teixeira",
+        "sexo": 2,
+        "3": 2
+    },
+    {
+        "id": 3,
+        "0": 3,
+        "nome": "nicole",
+        "1": "nicole",
+        "sobrenome": "alvarenga",
+        "2": "alvarenga",
+        "sexo": 2,
+        "3": 2
+    },
+    {
+        "id": 4,
+        "0": 4,
+        "nome": "ana eliza",
+        "1": "ana eliza",
+        "sobrenome": "machado",
+        "2": "machado",
+        "sexo": 2,
+        "3": 2
+    }
+]
