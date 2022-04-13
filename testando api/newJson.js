@@ -1,0 +1,1 @@
+let pizzaJson=[{"id":1,"nome":"rander","sobrenome":"teixeira","sexo":1},{"id":2,"nome":"mariana","sobrenome":"teixeira","sexo":2},{"id":3,"nome":"nicole","sobrenome":"alvarenga","sexo":2},{"id":4,"nome":"ana eliza","sobrenome":"machado","sexo":2},{"id":5,"nome":"jorcivn","sobrenome":"jorcivan","sexo":2}]
